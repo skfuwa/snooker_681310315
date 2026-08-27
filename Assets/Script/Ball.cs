@@ -20,13 +20,20 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private BallColor color;
 
+    [SerializeField]
+    private MeshRenderer rd;
+
+
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log(point);
         GameManagar.instance.PlayerScore += point;
         Destroy(gameObject);
     }
-
+    void Awake()
+    {
+        rd = GetComponent<MeshRenderer>();
+    }
     void Start()
     {
         
@@ -36,5 +43,44 @@ public class Ball : MonoBehaviour, IPointerClickHandler
     void Update()
     {
         
+    }
+
+    public void SetColor(BallColor color)
+    {
+        switch (color)
+        {
+            case BallColor.White:
+                rd.material.color = Color.white;
+                point = 0;
+                break;
+            case BallColor.Red:
+                rd.material.color = Color.red;
+                point = 1;
+                break;
+            case BallColor.Yellow:
+                rd.material.color = Color.yellow;
+                point = 2;
+                break;
+            case BallColor.Green:
+                rd.material.color = Color.green;
+                point = 3;
+                break;
+            case BallColor.Brown:
+                rd.material.color = new Color(0.6f, 0.3f, 0.1f);
+                point = 4;
+                break;
+            case BallColor.Blue:
+                rd.material.color = Color.blue;
+                point = 5;
+                break;
+            case BallColor.Pink:
+                rd.material.color = new Color(1f, 0.4f, 0.7f);
+                point = 6;
+                break;
+            case BallColor.Black:
+                rd.material.color = Color.black;
+                point = 7;
+                break;
+        }
     }
 }
