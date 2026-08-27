@@ -43,6 +43,7 @@ public class GameManagar : MonoBehaviour
                                      Quaternion.identity);
 
         Ball b = obj.GetComponent<Ball>();
-        b.SetColor(color);
+        b.SetColorAndPoint(color);
+
     }
 }

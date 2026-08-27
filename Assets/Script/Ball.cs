@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
     private int point;  
+
     [SerializeField]
     private BallColor color;
 
@@ -45,7 +46,7 @@ public class Ball : MonoBehaviour, IPointerClickHandler
         
     }
 
-    public void SetColor(BallColor color)
+    public void SetColorAndPoint(BallColor color)
     {
         switch (color)
         {
