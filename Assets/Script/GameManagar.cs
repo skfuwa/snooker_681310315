@@ -61,10 +61,10 @@ public class GameManagar : MonoBehaviour
             ShootBall();
 
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            xInput = -0.05f;
+            xInput = -1f;
 
         else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-            xInput = 0.05f;
+            xInput = 1f;
 
         else
             xInput = 0f;
