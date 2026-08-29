@@ -38,6 +38,6 @@ public class MainMenu : MonoBehaviour
     }
     public void SetVolume (float volume)
     {
-
+        AudioManager.instance.AdjustMasterVolume(volume);
     }
 }
