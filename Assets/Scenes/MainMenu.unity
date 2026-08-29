@@ -1313,6 +1313,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7189c9ee9157a245b4a7ccec3a733ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  bgm:
+  - {fileID: 1872270500}
+  sfx:
+  - {fileID: 619578394}
+  - {fileID: 1525721058}
+  - {fileID: 1237823964}
+  mixer: {fileID: 24100000, guid: 5ea5f31e03580474b8e011ce3b65fd2a, type: 2}
 --- !u!1 &1237823962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,7 +1483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: 372}
+  m_AnchoredPosition: {x: -333, y: 389}
   m_SizeDelta: {x: 1000, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325852261
@@ -1526,8 +1533,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2007,8 +2014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 304, y: 251}
-  m_SizeDelta: {x: -835.3163, y: -605.0573}
+  m_AnchoredPosition: {x: -463, y: 53}
+  m_SizeDelta: {x: -1013.545, y: -540.895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743738134
 MonoBehaviour:
