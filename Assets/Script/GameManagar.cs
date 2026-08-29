@@ -66,10 +66,10 @@ public class GameManagar : MonoBehaviour
             ShootBall();
 
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            xInput = -1f;
+            xInput = -0.5f;
 
         else if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-            xInput = 1f;
+            xInput = 0.5f;
 
         else
             xInput = 0f;
@@ -146,8 +146,8 @@ public class GameManagar : MonoBehaviour
 
         {
             PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
-            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.y);
-            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.z);
+            PlayerPrefs.SetFloat("cueBallPosY", cueBall.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosZ", cueBall.transform.position.z);
 
             Debug.Log("Saved");
         }
@@ -163,6 +163,8 @@ public class GameManagar : MonoBehaviour
             float x = PlayerPrefs.GetFloat("cueBallPosX");
             float y = PlayerPrefs.GetFloat("cueBallPosY");
             float z = PlayerPrefs.GetFloat("cueBallPosZ");
+
+            cueBall.transform.position = new Vector3(x, y, z);
 
             Debug.Log("Loaded");
         }
