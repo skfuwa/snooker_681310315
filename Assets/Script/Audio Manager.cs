@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
     }
     public void AdjustMasterVolume(float volume)
     {
-        Debug.Log("Volume ที่ได้รับ: " + volume);
+       
         mixer.SetFloat("master",volume);
     }
 }
