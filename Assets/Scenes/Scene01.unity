@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 3.2, y: 25.3, z: -27.3}
+  m_LocalPosition: {x: 3.5, y: 30.1, z: -31.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2031,6 +2031,8 @@ MonoBehaviour:
   ballPrefabs: {fileID: 4190803068771461679, guid: 0fe2c7780a83d3b4ba1dc24e1a47b66e, type: 3}
   cueBall: {fileID: 1612779225}
   xInput: 0
+  ballLine: {fileID: 844682817}
+  cam: {fileID: 330585543}
 --- !u!1 &1612779225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4190803068771461679, guid: 0fe2c7780a83d3b4ba1dc24e1a47b66e, type: 3}
