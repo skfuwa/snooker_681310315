@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
     private GameObject adjustPanel;
+
     void Start()
     {
         AudioManager.instance.PlayBGM(0);
