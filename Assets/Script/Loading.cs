@@ -9,7 +9,7 @@ public class Loading : MonoBehaviour
     private Slider slider;
 
     [SerializeField] 
-    private float waitSeconds = 1f;
+    private float waitSeconds = 2f;
     void Start()
     {
         

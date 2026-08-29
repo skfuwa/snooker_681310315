@@ -50,6 +50,11 @@ public class GameManagar : MonoBehaviour
         SetBall(BallColor.Blue, 5);
         SetBall(BallColor.Pink, 6);
         SetBall(BallColor.Black, 7);
+
+        if (Settings.fromSave) 
+        {
+            LoadGame();
+        }
     }
 
     // Update is called once per frame
@@ -71,6 +76,9 @@ public class GameManagar : MonoBehaviour
         if (Keyboard.current.backquoteKey.wasPressedThisFrame)
             StopBall();
 
+        if (Keyboard.current.leftShiftKey.isPressed && Keyboard.current.sKey.wasPressedThisFrame)
+            SaveGame();
+                
     }
     private void SetBall(BallColor color, int i)
     {
@@ -113,7 +121,7 @@ public class GameManagar : MonoBehaviour
         CameraBehindCueBall();
 
     }
-    
+
     private void CameraBehindCueBall()
     {
         cam.transform.parent = cueBall.transform;
@@ -130,6 +138,35 @@ public class GameManagar : MonoBehaviour
     {
         notiText.text = s;
     }
+    public void SaveGame()
+    {
+        StopBall();
 
+        if (cueBall != null)
+
+        {
+            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosX", cueBall.transform.position.z);
+
+            Debug.Log("Saved");
+        }
+
+    }
+    public void LoadGame()
+    {
+        StopBall();
+
+        if (cueBall != null)
+
+        {
+            float x = PlayerPrefs.GetFloat("cueBallPosX");
+            float y = PlayerPrefs.GetFloat("cueBallPosY");
+            float z = PlayerPrefs.GetFloat("cueBallPosZ");
+
+            Debug.Log("Loaded");
+        }
+
+    }
 }
 
