@@ -6,20 +6,20 @@ public class Hole : MonoBehaviour
     {
        Ball b = other.GetComponent<Ball>();
 
-        if(b != null)
-        { 
-            GameManagar.instance.PlayerScore += b.Point;  
+        if (b != null)
+        {
+            if (b.Point == 0)
+            {
+                GameManagar.instance.ShowString($"White Ball drop!\nYou lose!!");
+                
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                GameManagar.instance.ShowScoreText(b.Point);
+            }
             Destroy(b.gameObject);
         }
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
+    
 }

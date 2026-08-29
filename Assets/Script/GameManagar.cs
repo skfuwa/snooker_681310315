@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using TMPro;
 
 public class GameManagar : MonoBehaviour
 {
@@ -29,6 +29,9 @@ public class GameManagar : MonoBehaviour
 
     [SerializeField]
     private GameObject cam;
+
+    [SerializeField]
+    private TMP_Text notiText;
 
     public static GameManagar instance;
 
@@ -116,6 +119,16 @@ public class GameManagar : MonoBehaviour
         cam.transform.parent = cueBall.transform;
         cam.transform.position = cueBall.transform.position + new Vector3(0f, 7f, -13f);
         cam.transform.eulerAngles = new Vector3(30f, 0f, 0f);
+    }
+
+    public void ShowScoreText(int n)
+    {
+        playerScore += n;
+        notiText.text = $"Ball Point:{n}\nTotai Score: {playerScore}";
+    }
+    public void ShowString(string s)
+    {
+        notiText.text = s;
     }
 
 }
